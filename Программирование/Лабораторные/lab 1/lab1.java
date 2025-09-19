@@ -16,16 +16,13 @@ class lab1 {
         double[][] w = new double[8][15];
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 15; j++) {
-                w[i][j] = magic.arr3(i,j,e,x);
+                w[i][j] = arr3(i,j,e,x);
             }
         }
         for (int i = 0; i < 8; i++) {
-            System.out.println(arr2str.convert(w[i]) + "\n");
+            System.out.println(arr2str(w[i]) + "\n");
         }
     }
-}
-
-class magic{
     static double arr3(int i, int j, short[] e, double[] x_arr){
         double ret;
         double x = x_arr[j];
@@ -49,11 +46,7 @@ class magic{
         }
         return ret; 
     }
-}
-
-
-class arr2str{
-    static String convert(double[] arr) {
+    static String arr2str(double[] arr) {
         String ret = "";
         for (double i: arr) {
             if (!ret.isEmpty()) {ret = ret + "; ";}
